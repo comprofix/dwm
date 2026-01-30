@@ -1,0 +1,25 @@
+From 294982a65103d8b32daae91c9ae5a1d3f9e7232e Mon Sep 17 00:00:00 2001
+From: Matthew McKinnon <mmckinnon@comprofix.com>
+Date: Fri, 30 Jan 2026 21:12:32 +1000
+Subject: [PATCH] chore: set terminal - gnome-terminal
+
+---
+ config.def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index 81c3fc0..555719e 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -59,7 +59,7 @@ static const Layout layouts[] = {
+ /* commands */
+ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *termcmd[]  = { "gnome-terminal", NULL };
+ 
+ static const Key keys[] = {
+ 	/* modifier                     key        function        argument */
+-- 
+2.52.0
+
