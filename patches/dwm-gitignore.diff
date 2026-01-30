@@ -1,0 +1,40 @@
+From 92bedd12af6d675ba2670c7194db188d67e55e89 Mon Sep 17 00:00:00 2001
+From: Matthew McKinnon <mmckinnon@comprofix.com>
+Date: Fri, 30 Jan 2026 21:02:07 +1000
+Subject: [PATCH] chore: update gitignore
+
+---
+ .gitignore | 7 +++++++
+ Makefile   | 2 +-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..10d3653
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,7 @@
++drw.o
++dwm
++dwm.o
++util.o
++*.rej
++*.orig
++config.h
+diff --git a/Makefile b/Makefile
+index ffa69b4..3f26804 100644
+--- a/Makefile
++++ b/Makefile
+@@ -20,7 +20,7 @@ dwm: ${OBJ}
+ 	${CC} -o $@ ${OBJ} ${LDFLAGS}
+ 
+ clean:
+-	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
++	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz config.h
+ 
+ dist: clean
+ 	mkdir -p dwm-${VERSION}
+-- 
+2.52.0
+
